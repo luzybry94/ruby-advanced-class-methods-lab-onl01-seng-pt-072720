@@ -43,6 +43,7 @@ class Song
     # else
     #   create_by_name(str)
     # end
+    self.find_by_name(str) || self.create_by_name(str)
   end
   
   def self.alphabetical
