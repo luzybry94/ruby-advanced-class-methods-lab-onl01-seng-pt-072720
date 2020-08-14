@@ -26,6 +26,9 @@ class Song
     # new_song = Song.new_by_name(str)
     # new_song.save
     # new_song
+    new_song.create
+    new_song.name = str
+    new_song
   end
   
   def self.find_by_name(str)
