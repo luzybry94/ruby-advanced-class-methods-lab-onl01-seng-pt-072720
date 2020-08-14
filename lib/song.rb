@@ -23,8 +23,11 @@ class Song
   end
   
   def self.create_by_name(str)
-    new_song = Song.new_by_name(str)
-    new_song.save
+    # new_song = Song.new_by_name(str)
+    # new_song.save
+    # new_song
+    new_song = self.create
+    new_song.name = str
     new_song
   end
   
@@ -35,11 +38,12 @@ class Song
   end
   
   def self.find_or_create_by_name(str)
-    if find_by_name(str)
-      find_by_name(str)
-    else
-      create_by_name(str)
-    end
+    # if find_by_name(str)
+    #   find_by_name(str)
+    # else
+    #   create_by_name(str)
+    # end
+    self.find_by_name(str) || self.create_by_name(str)
   end
   
   def self.alphabetical
