@@ -38,11 +38,11 @@ class Song
   end
   
   def self.find_or_create_by_name(str)
-    if find_by_name(str)
-      find_by_name(str)
-    else
-      create_by_name(str)
-    end
+    # if find_by_name(str)
+    #   find_by_name(str)
+    # else
+    #   create_by_name(str)
+    # end
   end
   
   def self.alphabetical
